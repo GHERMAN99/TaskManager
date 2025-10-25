@@ -1,0 +1,62 @@
+
+
+
+def Qe1():
+    print("enter your name")
+    name =input()
+    print(name,name,name,name)
+Qe1()
+def Qe2():
+    print("enter your name")
+    name =input()
+    familyName=input("enter family name")
+    print(name,familyName)
+Qe2()
+def Qe3():
+    name =input("enter name")
+    print(name.capitalize(),name)
+Qe3()
+def Qe4():
+    print("enter your name")
+    firstName =input()
+    lastName=input("enter family name")
+    print(firstName,lastName)
+    print(firstName[0],lastName[0])
+    print(firstName[0]+"."+ lastName[0]+".")
+Qe4()
+def Qe5():
+    str="Monty Python"
+    evenLetters=str[0::2]
+    oddLetters = str[1::2]
+    print(evenLetters+oddLetters)
+Qe5()
+def Qe6():
+    letters=""
+    str1="AAA"
+    str2 = "BBB"
+    letters=3*str1+2*str2
+    print(letters)
+Qe6()
+#the * multiplies the amount of times the string is added
+def Qe7A():
+    num=int(input("enter num"))
+    rev_num=0
+    rev_num=rev_num+num%10*100
+    num=int(num/10)
+    rev_num = rev_num + num % 10 * 10
+    num=int(num/10)
+    rev_num = rev_num + num % 10
+    print(rev_num)
+Qe7A()
+def Qe7B():
+    num =""
+    num=(input("enter num"))
+    print(num[::-1])
+Qe7B()
+def Qe8():
+    str="Hello, my name is Indigo Montoya"
+    print(str[0:5])
+    print(str[7:14])
+    print(str[0::2])
+    str2=str[2::2]
+    print(str2[:9])

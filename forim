@@ -1,0 +1,275 @@
+def q1():
+    name = ""
+    length = 0
+    n = 44
+    sumL = 0
+    for x in range(n):
+        name = input("enter name ")
+        length = int(input("enter length"))
+        if length > 10:
+            print(name)
+        sumL = sumL + length
+    print(sumL)
+
+
+q1()
+
+
+def q2():
+    name = ""
+    fixes = 0
+    n = 286
+    sum_f = 0
+    for x in range(n):
+        name = input("enter name ")
+        fixes = int(input("enter amount of fixes"))
+        if fixes > 25:
+            print(name, "BONUS")
+        sum_f = sum_f + fixes
+    print(sum_f)
+
+
+q2()
+
+
+def q3():
+    name = ""
+    units = 0
+    n = 975
+    grade = 0
+    count = 0
+    for x in range(n):
+        name = input("enter name ")
+        units = int(input("enter units"))
+        grade = int(input("enter grade"))
+        print("name:", name, "amount of units:", units, "grade:", grade)
+        if units == 5:
+            count = count + 1
+        if grade > 95:
+            print("A")
+    print(count)
+
+
+q3()
+
+
+def q4():
+    price = 35
+    boxes = 0
+    n = 4790
+    count = 0
+    for x in range(n):
+        boxes = int(input("enter amount of boxes"))
+        if boxes < 4:
+            print(price * boxes + 10)
+        else:
+            print(price * boxes)
+        if boxes > 20:
+            count = count + 1
+    print(count)
+
+
+q4()
+
+from itertools import count
+
+
+def q5():
+    color = ""
+    n = 30
+    count = 0
+    for x in range(n):
+        color = input("enter color of flag")
+        if color == "black":
+            count = count + 1
+        print("day num", x + 1)
+    print(count)
+
+
+q5()
+
+
+def q7():
+    name = ""
+    birth_year = 0
+    n = 275
+    blood_type = ""
+    count = 0
+    for x in range(n):
+        name = input("enter name ")
+        birth_year = int(input("enter birth year"))
+        blood_type = input("enter blood type")
+        print("name:", name, "birth year:", birth_year, "blood type", blood_type)
+        if blood_type == "O":
+            count = count + 1
+    print(count)
+
+
+q7()
+
+
+def q8():
+    last_name = ""
+    kids = 0
+    n = 320
+    total = 0
+    for x in range(n):
+        last_name = input("enter last name ")
+        kids = int(input("enter amount of kids "))
+        print("last name:", last_name, "amoun tof kids:", kids)
+        if kids > 3:
+            print("DISCOUNT")
+        total = total + kids
+    print(total)
+
+
+q8()
+
+
+def while_q1():
+    name = ""
+    grade = 0
+    count = 0
+
+    while name != "FINISH":
+        name = input("enter name")
+        grade = int(input("enter grade"))
+        print(name)
+        print(grade)
+        if grade > 95:
+            count = count + 1
+
+    print(count)
+
+
+while_q1()
+
+
+def while_q2():
+    name = ""
+    price = 9
+    dishes = 0
+    count = 0
+    while name != "SOF":
+        name = input("enter name")
+        dishes = int(input("enter amount of dishes"))
+        print(name)
+        print("price:", price * dishes)
+        count = count + 1
+    print(count)
+
+
+while_q2()
+
+
+def while_q3():
+    rate_per_minute = float(input("Enter the rate per minute for calls abroad: "))
+    total_amount = 0
+    name = ""
+
+    while name != "BYE":
+        name = input("Enter the customer's name (or 'BYE' to stop): ")
+        if name == "BYE":
+            break
+        minutes = int(input("Enter the number of minutes spent on calls abroad: "))
+        amount_due = minutes * rate_per_minute
+        total_amount += amount_due
+
+        print(name, "ows", total_amount, "NIS")
+
+    print("Total amount charged by the company:", total_amount, "NIS")
+
+
+while_q3()
+
+
+def while_q4():
+    votes_hagai = 0
+    votes_hadas = 0
+    student_name = ""
+
+    while student_name != "SOF":
+        student_name = input("Enter student's name (or 'SOF' to end voting): ")
+        if student_name == "SOF":
+            break
+
+        vote = int(input("Enter vote for", student_name))
+        if vote == 1:
+            votes_hagai += 1
+        elif vote == 6:
+            votes_hadas += 1
+
+    print("Hagai received ", votes_hagai, "votes")
+    print("Hadas received", votes_hadas, "votes")
+
+
+while_q4()
+
+
+def while_q5():
+    cost_per_student = 11
+    t_students = 0
+    total_amount = 0
+    class_name = ""
+
+    while class_name != "BYE BYE":
+        class_name = input("Enter class name (or 'BYE BYE' to end): ")
+        if class_name == "BYE BYE":
+            break
+
+        students_in_class = int(input(f"Enter the number of students attending: "))
+        t_students += students_in_class
+        total_amount += students_in_class * cost_per_student
+
+        print(class_name, "class has", students_in_class, "students attending.")
+
+    print("Total students:", t_students)
+    print("Total amount collected:", total_amount, "NIS")
+
+
+while_q5()
+
+
+def while_q6():
+    mitkan_cost = 4
+    total_children = 0
+    child_name = ""
+
+    while child_name != "DAY OF END":
+        child_name = input("Enter child's name (or 'DAY OF END' to end): ")
+        if child_name == "DAY OF END":
+            break
+
+        mitknim_used = int(input("Enter the number of mitkanim "))
+        total_children += 1
+        amount_due = mitknim_used * mitkan_cost
+
+        print(child_name, "owes:", amount_due, "NIS")
+
+    print("Total children who participated in 'Fun Day':", total_children)
+
+
+while_q6()
+
+
+def while_q7():
+    name = ""
+    age = 0
+    gift = ""
+
+    while name != "SOF":
+        name = input("Enter the new subscriber's name (or 'SOF' to end): ")
+        if name == "SOF":
+            break
+
+        age = int(input("Enter age:"))
+
+        if age > 91:
+            gift = "gift vouchers"
+        else:
+            gift = "a book"
+
+        print(name, "will receive", gift)
+
+
+while_q7()
